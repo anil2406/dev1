@@ -1,0 +1,19 @@
+---
+- name: Create main Datadog agant yaml configuration file (beta)
+  template:
+    src: datadog.yaml.j2
+    dest: /etc/datadog-agent/datadog.yaml
+    owner: '{{ datadog_user }}'
+    group: '{{ datadog_group }}'
+  notify: restart datadog-agent
+
+- debug: 'msg="Using deprecated `datadog_process_checks` is no longer supported in agent6, use `process` under `datadog_checks` instead"'
+  when: datadog_process_checks is defined
+
+- name: Ensure datadog-agent is running
+  service: name=datadog-agent state=started enabled=yes
+  when: datadog_enabled
+
+- name: Ensure datadog-agent is not running
+  service: name=datadog-agent state=stopped enabled=no
+  when: not datadog_enabled

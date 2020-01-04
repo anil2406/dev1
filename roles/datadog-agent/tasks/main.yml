@@ -1,0 +1,10 @@
+---
+- include: pkg-debian.yml
+  when: ansible_os_family == "Debian"
+
+- include: pkg-redhat.yml
+  when: ansible_os_family == "RedHat"
+
+- include: agent6.yml
+
+- include: tomcat.yml
