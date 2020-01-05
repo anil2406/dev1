@@ -1,0 +1,9 @@
+---
+- name: Create main Datadog agant yaml configuration file (beta)
+  template:
+    src: cassandra.yml.j2
+    dest: /etc/datadog-agent/conf.d/cassandra.d/conf.yaml
+    owner: '{{ datadog_user }}'
+    group: '{{ datadog_group }}'
+  notify: restart datadog-agent
+
