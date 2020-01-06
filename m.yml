@@ -1,6 +1,6 @@
 ---
--hosts: all
- remote_user: root
- become: true
- roles:
- -datadog-agent
+- hosts: all
+  remote_user: root
+  become: true
+  roles:
+  - datadog-agent
