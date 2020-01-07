@@ -9,3 +9,5 @@
 
 - include: kafka.yml
 
+- include: jmx.yml
+
