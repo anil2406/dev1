@@ -1,0 +1,9 @@
+---
+- name: Create main Datadog agant yaml configuration file (beta)
+  template:
+    src: tomcat.yaml.j2
+    dest: /etc/datadog-agent/conf.d/tomcat.d/conf.yaml
+    owner: '{{ datadog_user }}'
+    group: '{{ datadog_group }}'
+  notify: restart datadog-agent
+

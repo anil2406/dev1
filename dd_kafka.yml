@@ -3,8 +3,8 @@
   remote_user: root
   become: yes
   roles:
-    - role: datadog-agent
-  
+    - role: kafka
+    
   vars:
     datadog_api_key: 1010626f8d1e1432eff1bf7aed1d4f60
     datadog_agent_version: 1:6.16.0-1

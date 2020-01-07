@@ -1,0 +1,41 @@
+init_config:
+       conf:
+       - include:
+          attribute:
+            OpenFileDescriptorCount:
+              metric_type: gauge
+              alias: jvm.openfiledescriptor.count
+            PeakThreadCount:
+              metric_type: gauge
+              alias: jvm.thread.count.max
+            FreeSwapSpaceSize:
+              metric_type: gauge
+              alias: jvm.swapspace.free
+            ThreadCount:
+              metric_type: gauge
+              alias: jvm.thread.count
+            ProcessCpuLoad:
+              metric_type: gauge
+              alias: jvm.process.cpu.utilization
+            TotalSwapSpaceSize:
+              metric_type: gauge
+              alias: jvm.swapspace.total
+            MaxFileDescriptorCount:
+              metric_type: gauge
+              alias: jvm.openfiledescriptor.count.max
+            TotalPhysicalMemorySize:
+              metric_type: gauge
+              alias: jvm.physicalmemory.total
+            SystemCpuLoad:
+              metric_type: gauge
+              alias: jvm.system.cpu.utilization
+            FreePhysicalMemorySize:
+              metric_type: gauge
+              alias: jvm.physicalmemory.free
+            domain: java.lang
+
+instances:
+  - host: localhost
+    port: 7199
+
+

@@ -9,6 +9,5 @@
 
 - include: tomcat.yml
 
-- include: cassandra.yml
+- include: jmx.yml
 
-- include: kafka.yml

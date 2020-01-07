@@ -7,8 +7,7 @@
 
 - include: agent6.yml
 
-- include: tomcat.yml
-
 - include: cassandra.yml
 
-- include: kafka.yml
+- include: jmx.yml
+
