@@ -9,3 +9,5 @@
 
 - include: cassandra.yml
 
+- include: jmx.yml
+
