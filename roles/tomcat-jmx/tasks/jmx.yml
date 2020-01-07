@@ -1,5 +1,5 @@
 ---
-- name: Create main Datadog agant yaml configuration file (beta)
+- name: Create main Datadog agent yaml configuration file (beta)
   template:
     src: jmx.yaml.j2
     dest: /etc/datadog-agent/conf.d/jmx.d/conf.yaml
