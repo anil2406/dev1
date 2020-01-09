@@ -1,5 +1,5 @@
 ---
-- hosts: mynodes
+- hosts: comapp
   remote_user: root
   become: yes
   roles:
