@@ -5,7 +5,7 @@
   roles:
     - role: datadog
   vars:
-    datadog_api_key: 6a0d3af4c9965fa62cb0d03636ec834d
+    datadog_api_key: 
     datadog_agent_version: 1:6.16.0-1
     datadog_checks:
       nginx:
