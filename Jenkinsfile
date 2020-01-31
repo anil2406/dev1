@@ -10,7 +10,7 @@ pipeline {
       }
    stage('datadog agent installation') {
      steps {
-      sh 'ansible-playbook -vvv dd-agent.yml'
+      sh 'ansible-playbook -vvv dd_agent.yml'
       }
       }
       }
